@@ -17,7 +17,7 @@ chdir(dirname(__DIR__));
 (new ApplicationBuilder())
     ->addGlobalConfigPath(__DIR__ . '/../config/{,*.}{global,local}.php')
     ->setCacheLocation(__DIR__ . '/../data/cache')
-    ->setCacheEnabled(false)
+    ->setCacheEnabled(getenv('CACHE_ENABLED') === 'true')
     ->addConfig(
         new LoggerConfigLoader(),
         new ApplicationConfigLoader(),
