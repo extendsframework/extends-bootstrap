@@ -14,7 +14,7 @@ return [
                     'path' => '/',
                     'parameters' => [
                         'controller' => ApplicationController::class,
-                        'action' => ApplicationController::ACTION_INDEX,
+                        'action' => 'index',
                     ],
                 ],
             ],

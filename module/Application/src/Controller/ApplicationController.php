@@ -9,8 +9,6 @@ use ExtendsFramework\Router\Controller\AbstractController;
 
 class ApplicationController extends AbstractController
 {
-    public const ACTION_INDEX = 'index';
-
     /**
      * Application index.
      *
