@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Application;
 
 use Application\Controller\ApplicationController;
-use ExtendsFramework\Http\Router\Route\Path\PathRoute;
-use ExtendsFramework\Http\Router\RouterInterface;
+use ExtendsFramework\Router\Route\Path\PathRoute;
+use ExtendsFramework\Router\RouterInterface;
 use ExtendsFramework\ServiceLocator\Config\Loader\LoaderInterface;
 use ExtendsFramework\ServiceLocator\Resolver\Invokable\InvokableResolver;
 use ExtendsFramework\ServiceLocator\ServiceLocatorInterface;

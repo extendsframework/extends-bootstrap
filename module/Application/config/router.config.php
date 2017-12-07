@@ -2,8 +2,8 @@
 declare(strict_types=1);
 
 use Application\Controller\ApplicationController;
-use ExtendsFramework\Http\Router\Route\Path\PathRoute;
-use ExtendsFramework\Http\Router\RouterInterface;
+use ExtendsFramework\Router\Route\Path\PathRoute;
+use ExtendsFramework\Router\RouterInterface;
 
 return [
     RouterInterface::class => [
