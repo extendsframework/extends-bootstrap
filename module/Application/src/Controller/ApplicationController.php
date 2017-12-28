@@ -5,7 +5,7 @@ namespace Application\Controller;
 
 use ExtendsFramework\Http\Response\Response;
 use ExtendsFramework\Http\Response\ResponseInterface;
-use ExtendsFramework\Http\Router\Controller\AbstractController;
+use ExtendsFramework\Router\Controller\AbstractController;
 
 class ApplicationController extends AbstractController
 {
