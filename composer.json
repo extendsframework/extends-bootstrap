@@ -12,10 +12,7 @@
     ],
     "require": {
         "php": "^7.2.0",
-        "extendsframework/extends-application": "^0.1.0",
-        "extendsframework/extends-http": "^0.1.0",
-        "extendsframework/extends-router": "^0.1.0",
-        "extendsframework/extends-servicelocator": "^0.1.0"
+        "extendsframework/extends-application": "^0.1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.0.0",
