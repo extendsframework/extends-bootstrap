@@ -1,4 +1,12 @@
 <?php
 declare(strict_types=1);
 
-return [];
+use ExtendsFramework\Shell\ShellInterface;
+
+return [
+    ShellInterface::class => [
+        'name' => 'Extends Framework Bootstrap Console',
+        'program' => 'extends',
+        'version' => '0.1.0',
+    ],
+];
