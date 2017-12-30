@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+namespace Application;
+
 use Application\Controller\ApplicationController;
 use ExtendsFramework\Router\Route\Path\PathRoute;
 use ExtendsFramework\Router\RouterInterface;
