@@ -10,7 +10,7 @@ use ExtendsFramework\Router\RouterInterface;
 return [
     RouterInterface::class => [
         'routes' => [
-            [
+            'index' => [
                 'name' => PathRoute::class,
                 'options' => [
                     'path' => '/',
