@@ -12,12 +12,16 @@ class ApplicationController extends AbstractController
     /**
      * Application index.
      *
+     * @param string $name
      * @return ResponseInterface
      */
-    public function indexAction(): ResponseInterface
+    public function indexAction(string $name): ResponseInterface
     {
         return (new Response())->withBody([
-            'message' => 'Welcome to this application!',
+            'message' => sprintf(
+                'Hello %s, welcome to this application!',
+                $name
+            ),
         ]);
     }
 }

@@ -6,11 +6,13 @@ namespace Application;
 use Application\Controller\ApplicationController;
 use Application\Task\ApplicationTask;
 use ExtendsFramework\Router\Route\Path\PathRoute;
+use ExtendsFramework\Router\Route\Query\QueryRoute;
 use ExtendsFramework\Router\RouterInterface;
 use ExtendsFramework\ServiceLocator\Resolver\Invokable\InvokableResolver;
 use ExtendsFramework\ServiceLocator\Resolver\Reflection\ReflectionResolver;
 use ExtendsFramework\ServiceLocator\ServiceLocatorInterface;
 use ExtendsFramework\Shell\ShellInterface;
+use ExtendsFramework\Validator\Type\StringValidator;
 use PHPUnit\Framework\TestCase;
 
 class ApplicationModuleTest extends TestCase
@@ -41,13 +43,27 @@ class ApplicationModuleTest extends TestCase
             [
                 RouterInterface::class => [
                     'routes' => [
-                        [
+                        'index' => [
                             'name' => PathRoute::class,
                             'options' => [
                                 'path' => '/',
                                 'parameters' => [
                                     'controller' => ApplicationController::class,
                                     'action' => 'index',
+                                ],
+                            ],
+                            'abstract' => false,
+                            'children' => [
+                                'query' => [
+                                    'name' => QueryRoute::class,
+                                    'options' => [
+                                        'validators' => [
+                                            'name' => StringValidator::class,
+                                        ],
+                                        'parameters' => [
+                                            'name' => 'stranger',
+                                        ],
+                                    ],
                                 ],
                             ],
                         ],

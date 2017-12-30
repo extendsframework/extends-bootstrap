@@ -19,12 +19,12 @@ class ApplicationControllerTest extends TestCase
     public function testIndexAction(): void
     {
         $controller = new ApplicationController();
-        $response = $controller->indexAction();
+        $response = $controller->indexAction('John');
 
         $this->assertInstanceOf(ResponseInterface::class, $response);
         if ($response instanceof ResponseInterface) {
             $this->assertSame([
-                'message' => 'Welcome to this application!'
+                'message' => 'Hello John, welcome to this application!',
             ], $response->getBody());
             $this->assertSame(200, $response->getStatusCode());
         }
