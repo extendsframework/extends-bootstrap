@@ -2,5 +2,5 @@
 <ruleset name="Extends Framework Coding Standard">
     <rule ref="./vendor/extendsframework/extends-coding-standard/ruleset.xml"/>
 
-    <file>src</file>
+    <file>module</file>
 </ruleset>
