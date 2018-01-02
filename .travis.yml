@@ -10,7 +10,6 @@ php:
   - 7.2
 
 before_script:
-  - mkdir -p build/logs
   - composer install --no-interaction
   - cp phpunit.dist.xml phpunit.xml
   - cp phpcs.dist.xml phpcs.xml
@@ -20,4 +19,4 @@ script:
   - vendor/bin/phpcs
 
 after_success:
-  - vendor/bin/php-coveralls
+  - vendor/bin/php-coveralls -v
