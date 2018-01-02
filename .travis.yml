@@ -10,6 +10,7 @@ php:
   - 7.2
 
 before_script:
+  - mkdir -p build/logs
   - composer install --no-interaction
   - cp phpunit.dist.xml phpunit.xml
   - cp phpcs.dist.xml phpcs.xml
@@ -18,5 +19,5 @@ script:
   - vendor/bin/phpunit --verbose --colors=always --coverage-clover clover.xml
   - vendor/bin/phpcs
 
-after_script:
-  - coveralls -v
+after_success:
+  - php vendor/bin/coveralls
