@@ -20,4 +20,4 @@ script:
   - vendor/bin/phpcs
 
 after_success:
-  - php vendor/bin/coveralls
+  - vendor/bin/php-coveralls
