@@ -8,6 +8,9 @@
     <filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./module</directory>
+            <exclude>
+                <directory>./module/Application/config</directory>
+            </exclude>
         </whitelist>
     </filter>
 </phpunit>
