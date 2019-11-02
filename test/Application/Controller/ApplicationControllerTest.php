@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Application\Controller;
 
-use ExtendsFramework\Http\Response\ResponseInterface;
 use PHPUnit\Framework\TestCase;
 
 class ApplicationControllerTest extends TestCase
@@ -21,12 +20,10 @@ class ApplicationControllerTest extends TestCase
         $controller = new ApplicationController();
         $response = $controller->indexAction('John');
 
-        $this->assertInstanceOf(ResponseInterface::class, $response);
-        if ($response instanceof ResponseInterface) {
-            $this->assertSame([
-                'message' => 'Hello John, welcome to this application!',
-            ], $response->getBody());
-            $this->assertSame(200, $response->getStatusCode());
-        }
+        $this->assertIsObject($response);
+        $this->assertSame([
+            'message' => 'Hello John, welcome to this application!',
+        ], $response->getBody());
+        $this->assertSame(200, $response->getStatusCode());
     }
 }

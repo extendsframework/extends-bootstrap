@@ -15,7 +15,6 @@ class ApplicationTaskTest extends TestCase
      *
      * @covers \Application\Task\ApplicationTask::__construct()
      * @covers \Application\Task\ApplicationTask::execute()
-     * @covers \Application\Task\ApplicationTask::getOutput()
      */
     public function testExecute(): void
     {
