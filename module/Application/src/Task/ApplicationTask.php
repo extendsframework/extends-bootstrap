@@ -13,7 +13,7 @@ class ApplicationTask implements TaskInterface
      *
      * @var OutputInterface
      */
-    protected $output;
+    private $output;
 
     /**
      * ApplicationTask constructor.
@@ -30,21 +30,9 @@ class ApplicationTask implements TaskInterface
      */
     public function execute(array $data): void
     {
-        $this
-            ->getOutput()
-            ->line(sprintf(
-                'Hello %s, welcome to this application!',
-                $data['name'] ?? 'there'
-            ));
-    }
-
-    /**
-     * Get output.
-     *
-     * @return OutputInterface
-     */
-    protected function getOutput(): OutputInterface
-    {
-        return $this->output;
+        $this->output->line(sprintf(
+            'Hello %s, welcome to this application!',
+            $data['name'] ?? 'there'
+        ));
     }
 }
